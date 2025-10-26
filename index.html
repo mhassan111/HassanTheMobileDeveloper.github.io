@@ -1,234 +1,801 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Hassan-SeniorMobileDeveloper</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Hassan - Senior Mobile Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #f59e0b;
+        }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Muhammad Hassan<br /></h1>
-						<h2>Senior Mobile Developer | Android | Kotlin | KMM | Jetpack Compose | Flutter</h2>
-						<p><h3>As a Senior Mobile Developer, I design, develop, and maintain applications for a wide range of Android devices & iOS devices, including mobile phones and tablet computers. I am proficient with the Android SDK, Android Studio and Xcode, and I have hands-on experience with Kotlin, Jetpack Compose, KMM, Firebase, SwiftUI, and other advanced tools and frameworks. I am also familiar with RESTful APIs, Material Design, UI/UX standards, and performance optimization techniques. I have a knack for delivering high-quality apps that meet the expectations and requirements of the clients and users. I am self-driven, independent, and collaborative, and I enjoy working with teams in a rapid delivery environment. My goal is to continue enhancing and showcasing my skills as a professional Mobile developer and to create innovative and impactful solutions for the Android & iOS platform. <a href="https://www.linkedin.com/in/muhammad-hassan-0aab45a1">@Hassan-Linkedin</a></a><br />
-						</h3></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Android Apps</a>
-					</header>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Android</a></li>
-							<li><a href="generic.html">KMM</a></li>
-							<li><a href="elements.html">Flutter</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-				<!-- Main -->
-					<div id="main">
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">Securekin<br />
-										Parental Control & Mobile Spy App
-							        </a></h2>
-									<p>This app allows to Monitor your kid's digital devices and protect them from online dangers. Securekin helps you to find what's your child is doing on their smartphone. It allows you to keep an eye on kids' online activities. App contains feature like Screen time, Location Tracking, Browsing History, Screen Recording, Screenshot, Call Recording, Microphone Recording and Social Media Messages tracking, Calls History, Sms History and Notifications History. So, you have a 360 degree view of your child device.</p>
-								</header>
-								<a href="https://play.google.com/store/search?q=securekin&c=apps&hl=en&gl=US" class="image main"><img src="images/secure_kin.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://play.google.com/store/search?q=securekin&c=apps&hl=en&gl=US" class="button large">View Project</a></li>
-								</ul>
-							</article>
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
-										<h2><a href="#">QR-Fit<br />
-										A Fitness tracking app</a></h2>
-									</header>
-									<a href="https://play.google.com/store/apps/details?id=nl.qrfit.qrfit&hl=en&gl=US" class="image fit"><img src="images/qr_fit.webp" alt="" /></a>
-									<p>An fitness tracking app to keep record of your healthy routines, walks in the parsk and travelled distance. This app helps you to keep you fit and healthy by maintaing your diet and fitness routines.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!-- <span class="date">April 22, 2017</span> -->
-										<h2><a href="#">Starzplay<br />
-										A Video Streaming App </a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/starzplay.webp" alt="" /></a>
-									<p>Starzplay app bringing you a whole world of new content, new ways to stream and a whole lot more for free:
-										It is introducing you to STARZ ON - Stream movies and series for free without the need to register - just press play!
-									With STARZ ON TV, get free access to live streaming channels and digital channels curated around every taste.
-								</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!-- <span class="date">April 18, 2017</span> -->
-										<h2><a href="#">Taleemabad<br />
-										An Educational e-Learning App</a></h2>
-									</header>
-									<a href="https://play.google.com/store/apps/details?id=com.orenda.taimo.myapplication&hl=en&gl=US" class="image fit"><img src="images/taleemabad.webp" alt="" /></a>
-									<p>An online tutor application used in schools for teaching the childs. It contains all theoratical & practical solutions at one place. With it educational videos and students exams conducting solution, this app is like a virtual school.</p>
-									<ul class="actions special">
-										<li><a href="https://play.google.com/store/apps/details?id=com.orenda.taimo.myapplication&hl=en&gl=US" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!-- <span class="date">April 14, 2017</span> -->
-										<h2><a href="#">Screen Recorder<br />
-										Record screen of device or any app</a></h2>
-									</header>
-									<a href="https://play.google.com/store/apps/details?id=com.linuxauthority.screenrecorder&hl=en&gl=" class="image fit"><img src="images/screen_recorder.webp" alt="" /></a>
-									<p>This app allows you to record both system audio and microphone audio, so you can capture everything you need in one place. Plus, with customizable settings, you can choose the resolution, frame rate, and bit rate that works best for you.</p>
-									<ul class="actions special">
-										<li><a href="https://play.google.com/store/apps/details?id=com.linuxauthority.screenrecorder&hl=en&gl=US" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!-- <span class="date">April 11, 2017</span> -->
-										<h2><a href="#">Call Recorder<br />
-											Auto Recording</a></h2>
-									</header>
-									<a href="https://play.google.com/store/apps/details?id=call.recorder.automatic.acr&hl=en&gl=US" class="image fit"><img src="images/call_recorder.webp" alt="" /></a>
-									<p>Automatic Call Recorder is a simple and smart auto telephone voice recorder for all android phones like Samsung S20, S10, S9, Android Pie, Android 10... to easily get phone recorded from both sides with clear voice anytime.</p>
-									<ul class="actions special">
-										<li><a href="https://play.google.com/store/apps/details?id=call.recorder.automatic.acr&hl=en&gl=US" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!-- <span class="date">April 7, 2017</span> -->
-										<h2><a href="https://play.google.com/store/apps/details?id=com.notifier.handler&hl=en&gl=US">AutoNotification Handler<br />
-										Apps Notification Tracker</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/notification_manager.webp" alt="" /></a>
-									<p> This app Saves and read all the incoming notifications.
-										You can View all the notifications saved.
-									    You can Block any irritating notifications for a specific app or block notification by text or notification title
-										</p>
-									<ul class="actions special">
-										<li><a href="https://play.google.com/store/apps/details?id=com.notifier.handler&hl=en&gl=US" class="button">View Project</a></li>
-									</ul>
-								</article>
-							</section>
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-					</div>
+        nav a:hover {
+            color: var(--primary);
+        }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Barkat Street, Tehsil Shalamaar, Manawan<br />
-								Lahore, Punjab Pakistan</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(+92) 0335-0774108</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">mhassanuetcs12@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/muhammad-hassan-0aab45a1/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/mhassan111" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -250px;
+            right: -250px;
+            animation: float 20s infinite;
+        }
 
-			</div>
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(50px, 50px) rotate(180deg); }
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
 
-	</body>
-</html>
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .hero .contact-info {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .hero .contact-info a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .hero .contact-info a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        /* Summary */
+        .summary-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+        }
+
+        .skill-card h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            padding: 0.5rem 0;
+            color: var(--text-muted);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .skill-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            width: calc(50% - 40px);
+            transition: all 0.3s;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-content:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+        }
+
+        .timeline-content h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .company {
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .duration {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 1.5rem;
+        }
+
+        .project-header h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-header .platform {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-body p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--secondary);
+        }
+
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            transition: all 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        footer p {
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-content {
+                width: calc(100% - 40px);
+                margin-left: 40px !important;
+            }
+
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">MH</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Muhammad Hassan</h1>
+            <p class="subtitle">Senior Mobile Developer | Android | KMP | Flutter | iOS</p>
+            <div class="contact-info">
+                <a href="mailto:mhassanuetcs12@gmail.com">📧 mhassanuetcs12@gmail.com</a>
+                <a href="tel:+923350774108">📱 +92 335 0774108</a>
+                <a>📍 Lahore, Pakistan</a>
+            </div>
+            <div>
+                <a href="https://linkedin.com/in/muhammad-hassan-0aab45a1" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://upwork.com/freelancers/~0182621baf8a16e9e5" target="_blank" class="btn">Upwork Profile</a>
+                <a href="#projects" class="btn">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="summary-content">
+                <p>Seasoned Senior Mobile Developer with <strong>8+ years of expertise in native Android development</strong>, 4+ years in Flutter, 2+ years in Kotlin Multiplatform (KMP), and 6 months in iOS development. Specialized in architecting and delivering scalable, high-performance mobile applications across multiple platforms.</p>
+                <p style="margin-top: 1.5rem;">Expert in modern mobile development paradigms including Clean Architecture, MVVM/MVI patterns, reactive programming, and cross-platform solutions. Proven track record of leading mobile projects from conception to deployment, with strong emphasis on code quality, testing, and performance optimization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🤖 Android Development</h3>
+                    <ul>
+                        <li>8+ years of experience</li>
+                        <li>Jetpack Compose & Material Design 3</li>
+                        <li>MVVM/MVI Architecture</li>
+                        <li>Kotlin Coroutines & Flow</li>
+                        <li>Room, DataStore, Retrofit</li>
+                        <li>JUnit, Espresso, MockK</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🦋 Flutter Development</h3>
+                    <ul>
+                        <li>4+ years of experience</li>
+                        <li>Bloc, Riverpod, GetX</li>
+                        <li>Clean Architecture</li>
+                        <li>Dio, HTTP packages</li>
+                        <li>Hive, SQLite</li>
+                        <li>Flutter Test, Mockito</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🔷 Kotlin Multiplatform</h3>
+                    <ul>
+                        <li>2+ years of experience</li>
+                        <li>Compose Multiplatform</li>
+                        <li>Ktor Client</li>
+                        <li>SQLDelight</li>
+                        <li>Koin & Hilt DI</li>
+                        <li>Apollo Kotlin (GraphQL)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🍎 iOS Development</h3>
+                    <ul>
+                        <li>6 months of experience</li>
+                        <li>Swift & SwiftUI</li>
+                        <li>UIKit, Core Data</li>
+                        <li>Combine Framework</li>
+                        <li>URLSession, Alamofire</li>
+                        <li>XCTest</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🚀 DevOps & Cloud</h3>
+                    <ul>
+                        <li>GitHub Actions, GitLab CI</li>
+                        <li>Bitrise, Fastlane</li>
+                        <li>Firebase, Supabase</li>
+                        <li>AWS (S3, Amplify)</li>
+                        <li>Google Cloud Platform</li>
+                        <li>CI/CD Pipeline Implementation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>⚙️ Backend & APIs</h3>
+                    <ul>
+                        <li>Spring Boot with Kotlin</li>
+                        <li>RESTful API Design</li>
+                        <li>GraphQL (Apollo)</li>
+                        <li>PostgreSQL, MySQL</li>
+                        <li>OAuth 2.0, JWT</li>
+                        <li>Firebase Auth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Mobile Developer</h3>
+                        <div class="company">Upwork</div>
+                        <div class="duration">August 2025 - Present (2 months)</div>
+                        <p>Leading cross-platform mobile development projects. Implementing CI/CD pipelines for automated testing and deployment.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Android Developer</h3>
+                        <div class="company">Dubizzle Labs</div>
+                        <div class="duration">November 2024 - August 2025 (10 months)</div>
+                        <p>Architected scalable Android applications using Jetpack Compose. Implemented Clean Architecture with MVVM pattern. Optimized app performance resulting in improved user engagement.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Android Developer</h3>
+                        <div class="company">speeqr</div>
+                        <div class="duration">April 2024 - October 2024 (7 months)</div>
+                        <p>Developed feature-rich Android applications with modern UI/UX. Integrated real-time communication features using WebRTC. Implemented offline-first architecture with Room database.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Freelance Senior Android Developer</h3>
+                        <div class="company">Upwork</div>
+                        <div class="duration">July 2023 - April 2024 (10 months)</div>
+                        <p>Delivered 15+ mobile applications across Android and Flutter platforms. Specialized in KMP solutions for code sharing between platforms. Implemented Supabase backend integration.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Android Developer</h3>
+                        <div class="company">STARZPLAY</div>
+                        <div class="duration">April 2023 - July 2023 (4 months)</div>
+                        <p>Developed streaming video applications with advanced media playback. Implemented offline video caching and DRM protection. Optimized video streaming performance.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Android Developer</h3>
+                        <div class="company">Nextbridge Ltd.</div>
+                        <div class="duration">March 2022 - April 2023 (1 year 2 months)</div>
+                        <p>Led a team of 4 developers in multiple Android projects. Migrated legacy Java codebase to Kotlin with Jetpack Compose. Implemented CI/CD pipelines reducing deployment time by 60%.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Android Developer</h3>
+                        <div class="company">1zero7</div>
+                        <div class="duration">September 2017 - February 2022 (4 years 6 months)</div>
+                        <p>Developed and maintained 20+ Android applications. Introduced Flutter for cross-platform development. Implemented automated testing reducing bug reports by 40%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>OLX Pakistan</h3>
+                        <div class="platform">Android • Dubizzle Labs</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Pakistan's biggest marketplace super app for buying and selling locally. Over 30 million downloads and 3 million listings.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Jetpack Compose</span>
+                            <span class="tech-tag">MVVM</span>
+                            <span class="tech-tag">Coroutines</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.dubizzle.olx.pk" target="_blank" class="project-link">View on Play Store →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SecureKin</h3>
+                        <div class="platform">Android • 1zero7</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Parental control and mobile monitoring app. Provides 360-degree view of child's device activities with real-time tracking.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Room</span>
+                            <span class="tech-tag">Hilt</span>
+                            <span class="tech-tag">Coroutines</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.app.securekin" target="_blank" class="project-link">View on Play Store →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Starzplay</h3>
+                        <div class="platform">Android • STARZPLAY</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Streaming entertainment app with live channels. Watch movies, series, and live streaming content curated around every taste.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">MVVM</span>
+                            <span class="tech-tag">ExoPlayer</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.parsifal.starz" target="_blank" class="project-link">View on Play Store →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>QR-Fit</h3>
+                        <div class="platform">Android • Nextbridge Ltd.</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Fitness tracking app to maintain healthy routines with route navigation, distance tracking, and leaderboard ranking system.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">MVVM</span>
+                            <span class="tech-tag">Google Maps</span>
+                            <span class="tech-tag">Room</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=nl.qrfit.qrfit" target="_blank" class="project-link">View on Play Store →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>MediProx</h3>
+                        <div class="platform">Android + Flutter Admin</div>
+                    </div>
+                    <div class="project-body">
+                        <p>BLE-based healthcare proximity tracking system with real-time location monitoring, geo-fencing alerts, and automated audio recording.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">BLE</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Cloud Storage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ScreenGuard</h3>
+                        <div class="platform">Kotlin Multiplatform</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Cross-platform screen time management and app usage control system for Android and iOS with shared business logic.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">KMP</span>
+                            <span class="tech-tag">Compose MP</span>
+                            <span class="tech-tag">SQLDelight</span>
+                            <span class="tech-tag">Ktor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>HarmonyLink</h3>
+                        <div class="platform">iOS</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Modern dating application with advanced matching algorithms, real-time messaging, and video call integration for iOS users.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">SwiftUI</span>
+                            <span class="tech-tag">Core Data</span>
+                            <span class="tech-tag">Combine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>TALEEMABAD</h3>
+                        <div class="platform">Android • Nextbridge Ltd.</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Educational e-learning app providing online tutoring, video lessons, exam preparation, and interactive quizzes for students.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">RxAndroid</span>
+                            <span class="tech-tag">RxJava</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.orenda.taimo.myapplication" target="_blank" class="project-link">View on Play Store →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>8+ Years</h3>
+                    <p>Mobile Development Expertise</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">📱</div>
+                    <h3>25+ Apps</h3>
+                    <p>Successfully Delivered</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⚡</div>
+                    <h3>60% Faster</h3>
+                    <p>CI/CD Pipeline Efficiency</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⭐</div>
+                    <h3>Top-Rated</h3>
+                    <p>Upwork Freelancer</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">💯</div>
+                    <h3>100%</h3>
+                    <p>Job Success Score</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">👨‍🏫</div>
+                    <h3>10+ Developers</h3>
+                    <p>Mentored & Trained</p>
+                </div>
+            </div>
+        </div>
+    </section>
