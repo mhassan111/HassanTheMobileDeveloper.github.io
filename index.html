@@ -36,7 +36,6 @@
             padding: 0 20px;
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -76,7 +75,6 @@
             color: var(--primary);
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -160,7 +158,6 @@
             box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
         }
 
-        /* Section Styles */
         section {
             padding: 5rem 0;
         }
@@ -172,7 +169,6 @@
             color: var(--primary);
         }
 
-        /* Summary */
         .summary-content {
             max-width: 900px;
             margin: 0 auto;
@@ -181,7 +177,6 @@
             color: var(--text-muted);
         }
 
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -222,7 +217,6 @@
             border-bottom: none;
         }
 
-        /* Experience Timeline */
         .timeline {
             max-width: 900px;
             margin: 0 auto;
@@ -279,7 +273,34 @@
             margin-bottom: 1rem;
         }
 
-        /* Projects Grid */
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: rgba(30, 41, 59, 0.5);
+            color: var(--text);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            padding: 0.8rem 1.5rem;
+            margin: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .filter-btn:hover {
+            background: rgba(37, 99, 235, 0.2);
+            border-color: var(--primary);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -292,6 +313,10 @@
             overflow: hidden;
             border: 1px solid rgba(37, 99, 235, 0.2);
             transition: all 0.3s;
+        }
+
+        .project-card.hidden {
+            display: none;
         }
 
         .project-card:hover {
@@ -351,7 +376,6 @@
             color: var(--secondary);
         }
 
-        /* Achievements */
         .achievements-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -383,7 +407,54 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Footer */
+        .contact-section {
+            background: rgba(30, 41, 59, 0.3);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: var(--secondary);
+        }
+
         footer {
             background: var(--dark);
             padding: 3rem 0;
@@ -395,7 +466,6 @@
             color: var(--text-muted);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -426,7 +496,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
             <div class="logo">MH</div>
@@ -441,7 +510,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Muhammad Hassan</h1>
@@ -459,7 +527,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -470,7 +537,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title">Core Expertise</h2>
@@ -550,7 +616,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience">
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
@@ -621,12 +686,20 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+                <button class="filter-btn" onclick="filterProjects('android')">Android</button>
+                <button class="filter-btn" onclick="filterProjects('flutter')">Flutter</button>
+                <button class="filter-btn" onclick="filterProjects('kmp')">KMP</button>
+                <button class="filter-btn" onclick="filterProjects('ios')">iOS</button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-category="android">
                     <div class="project-header">
                         <h3>OLX Pakistan</h3>
                         <div class="platform">Android • Dubizzle Labs</div>
@@ -639,11 +712,11 @@
                             <span class="tech-tag">MVVM</span>
                             <span class="tech-tag">Coroutines</span>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.dubizzle.olx.pk" target="_blank" class="project-link">View on Play Store →</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.olx.pk" target="_blank" class="project-link">View on Play Store →</a>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="android">
                     <div class="project-header">
                         <h3>SecureKin</h3>
                         <div class="platform">Android • 1zero7</div>
@@ -660,7 +733,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="android">
                     <div class="project-header">
                         <h3>Starzplay</h3>
                         <div class="platform">Android • STARZPLAY</div>
@@ -677,7 +750,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="android">
                     <div class="project-header">
                         <h3>QR-Fit</h3>
                         <div class="platform">Android • Nextbridge Ltd.</div>
@@ -694,55 +767,23 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="android">
                     <div class="project-header">
                         <h3>MediProx</h3>
-                        <div class="platform">Android + Flutter Admin</div>
+                        <div class="platform">Android</div>
                     </div>
                     <div class="project-body">
                         <p>BLE-based healthcare proximity tracking system with real-time location monitoring, geo-fencing alerts, and automated audio recording.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Android</span>
                             <span class="tech-tag">BLE</span>
-                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Geolocation</span>
                             <span class="tech-tag">Cloud Storage</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>ScreenGuard</h3>
-                        <div class="platform">Kotlin Multiplatform</div>
-                    </div>
-                    <div class="project-body">
-                        <p>Cross-platform screen time management and app usage control system for Android and iOS with shared business logic.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">KMP</span>
-                            <span class="tech-tag">Compose MP</span>
-                            <span class="tech-tag">SQLDelight</span>
-                            <span class="tech-tag">Ktor</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>HarmonyLink</h3>
-                        <div class="platform">iOS</div>
-                    </div>
-                    <div class="project-body">
-                        <p>Modern dating application with advanced matching algorithms, real-time messaging, and video call integration for iOS users.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">SwiftUI</span>
-                            <span class="tech-tag">Core Data</span>
-                            <span class="tech-tag">Combine</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
+                <div class="project-card" data-category="android">
                     <div class="project-header">
                         <h3>TALEEMABAD</h3>
                         <div class="platform">Android • Nextbridge Ltd.</div>
@@ -757,45 +798,16 @@
                         <a href="https://play.google.com/store/apps/details?id=com.orenda.taimo.myapplication" target="_blank" class="project-link">View on Play Store →</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <div class="container">
-            <h2 class="section-title">Key Achievements</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">🏆</div>
-                    <h3>8+ Years</h3>
-                    <p>Mobile Development Expertise</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">📱</div>
-                    <h3>25+ Apps</h3>
-                    <p>Successfully Delivered</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">⚡</div>
-                    <h3>60% Faster</h3>
-                    <p>CI/CD Pipeline Efficiency</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">⭐</div>
-                    <h3>Top-Rated</h3>
-                    <p>Upwork Freelancer</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">💯</div>
-                    <h3>100%</h3>
-                    <p>Job Success Score</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">👨‍🏫</div>
-                    <h3>10+ Developers</h3>
-                    <p>Mentored & Trained</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="project-card" data-category="flutter">
+                    <div class="project-header">
+                        <h3>MediProx Admin Dashboard</h3>
+                        <div class="platform">Flutter</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Comprehensive admin dashboard for healthcare proximity tracking system. Manages user accounts, monitors recording activities, and provides administrative controls.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Bloc
